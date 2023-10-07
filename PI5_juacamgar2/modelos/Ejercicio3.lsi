@@ -1,0 +1,29 @@
+head section
+
+Integer getValor(Integer i)
+Integer getMax(Integer i)
+Integer getN()
+Integer getM()
+Integer n = getN()
+Integer m = getM()
+Integer getProd(Integer j)
+Integer getTiempoP(Integer i, Integer j)
+Integer getTiempoE(Integer i, Integer j) 
+Integer getMan(Integer j)
+Integer getTP()
+Integer getTM()
+Integer tP = getTP()
+Integer tM = getTM()
+
+goal section
+
+max sum(getValor(i) x[i], i in 0 .. n)
+
+constraints section
+x[i] <= getMax(i), i in 0 .. n
+sum(getTiempoP(i,j) x[i], i in 0 .. n, j in 0 .. m) <= tP
+sum(getTiempoE(i,j) x[i], i in 0 .. n, j in 0 .. m) <= tM
+
+
+
+int x[i], i in 0 .. n

@@ -1,0 +1,27 @@
+head section
+Integer getPresupuesto()
+Integer p = getPresupuesto()
+Integer getVal(Integer i)
+Double getSu(Integer i)
+Integer getN()
+Integer n = getN()
+Integer getM()
+Integer m = getM()
+Boolean tieneCualidad(Integer i,Integer j)
+Integer sonIncompatibles(Integer i,Integer j)
+
+
+goal section
+
+max sum(getVal(i)  x[i], i in 0 .. n) 
+
+constraints section
+
+sum(getSu(i) x[i], i in 0 .. n) <= p
+sum(x[i], i in 0 .. n| tieneCualidad(i,j)) >=1, j in 0 .. m
+x[i] + x[j] <= sonIncompatibles(i,j), i in 0 .. n, j in 0 .. n
+
+
+bin
+
+x[i], i in 0 .. n

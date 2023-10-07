@@ -1,0 +1,24 @@
+head section
+
+Integer getN()
+Integer getM()
+Integer getPeso(Integer i)
+Integer getCapacidad(Integer j)
+Integer n = getN()
+Integer m = getM()
+Boolean sonCompatibles(Integer i,Integer j)
+
+goal section
+
+max sum(y[j], j in 0 .. m)
+
+constraints section
+
+
+sum(x[i,j], j in 0 .. m) <= 1, i in 0 .. n
+sum(getPeso(i) x[i,j], i in 0 .. n|sonCompatibles(i,j))- getCapacidad(j) y[j] = 0, j in 0 .. m
+
+bin
+
+y[j], j in 0 .. m
+x[i,j], i in 0 .. n,j in 0 .. m

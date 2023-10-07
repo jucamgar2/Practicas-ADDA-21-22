@@ -1,0 +1,25 @@
+head section
+
+Integer getN()
+Integer getM()
+Integer getTam(Integer i)
+Integer tamMax(Integer j)
+Integer capacidadM(Integer j)
+Integer n = getN()
+Integer m = getM()
+
+goal section
+
+max sum(x[i,j], i in 0 .. n, j in 0 .. m)
+
+constraints section
+
+sum(getTam(i) x[i,j], i in 0 .. n) <= capacidadM(j), j in 0 .. m
+
+getTam(i) x[i,j] <= tamMax(j), i in 0 .. n, j in 0 .. m
+
+sum(x[i,j], j in 0 .. m) <= 1, i in 0 .. n
+
+bin  
+
+x[i,j], i in 0 .. n, j in 0 .. m
